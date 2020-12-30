@@ -1,27 +1,33 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import routers from './routers.js'
+import { config } from '../statics/config/index.js'
+import store from '../store/index.js'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    name: 'IndexLayout',
+    component: () => import('../layouts/IndexLayout.vue'),
+    children: routers
   }
 ]
 
 const router = new VueRouter({
   routes
+})
+
+router.afterEach((to, from) => {
+  config.menus.forEach(menu => {
+    menu.children.forEach(child => {
+      if (child.path === to.name) {
+        const breadcrumb = [menu, child]
+        store.commit('pageState/setBreadcrumb', breadcrumb)
+      }
+    })
+  })
 })
 
 export default router
