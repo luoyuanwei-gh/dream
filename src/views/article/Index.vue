@@ -6,7 +6,8 @@
 
 <script>
 import BaseArticle from '../../components/base/BaseArticle.vue'
-import { bfcDesc } from '../../statics/article/html/bfc/index.js'
+import { getJson } from '@/api/index.js'
+
 export default {
   name: 'Home',
   components: {
@@ -14,8 +15,22 @@ export default {
   },
   data () {
     return {
-      article: bfcDesc
+      article: {}
     }
+  },
+  beforeRouteUpdate (to, from, next) {
+    const id = this.$route.query.id
+    console.log(id)
+  },
+  created () {
+    const id = this.$route.query.id
+    console.log(id)
+    getJson(`static/${id}.json`).then(res => {
+      console.log(res.data)
+      this.article = res.data
+    })
+  },
+  methods: {
   }
 }
 </script>

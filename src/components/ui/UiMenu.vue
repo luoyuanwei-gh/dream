@@ -40,15 +40,20 @@ export default {
   methods: {
     goLink (item) {
       this.$store.dispatch('pageState/setCurrentPage', item)
-      const isExit = this.contentTabs.some(itemTab => {
-        return itemTab.code === item.code
-      })
-      if (this.$route.path !== '/' + item.path) {
-        if (!isExit) {
-          this.$store.dispatch('pageState/addContentTabs', item)
-        }
-        this.$router.push(item.path)
-      }
+      this.$router.push(item.path)
+      // const isExit = this.contentTabs.some(itemTab => {
+      //   return itemTab.code === item.code
+      // })
+      // if (this.$route.path !== '/' + item.path) {
+      //   if (!isExit) {
+      //     this.$store.dispatch('pageState/addContentTabs', item)
+      //   }
+      //   if (item.path.startsWith('article?id') && this.$route.path === 'article') {
+      //     this.$router.push({ query: { id: 'index' } })
+      //   } else {
+      //     this.$router.push(item.path)
+      //   }
+      // }
     },
     handleOpen (key, keyPath) {
     },

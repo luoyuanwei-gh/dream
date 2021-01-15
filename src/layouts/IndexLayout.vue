@@ -6,15 +6,21 @@
         <UiMenu></UiMenu>
       </div>
       <div class="com-content">
-        <el-tabs type="border-card" v-model="activeTabPath" class="tab-content" closable @tab-remove="tabRemove" @tab-click="tabClick()">
+        <el-tabs
+          type="border-card"
+          v-model="activeTabPath"
+          class="tab-content"
+          closable
+          @tab-remove="tabRemove"
+          @tab-click="tabClick()">
           <el-tab-pane
             v-for="tab in contentTabs"
             :key="tab.code"
             :label="tab.name"
             :name="tab.path"
             >
-            <UiBreadcrumb></UiBreadcrumb>
           </el-tab-pane>
+          <UiBreadcrumb></UiBreadcrumb>
           <router-view></router-view>
         </el-tabs>
       </div>
@@ -45,7 +51,6 @@ export default {
   },
   watch: {
     activeTab: function (oldV, newV) {
-      console.log(oldV, newV)
       this.activeTabPath = oldV
     }
   },
