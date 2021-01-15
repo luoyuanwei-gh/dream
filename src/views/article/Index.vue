@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="article-page">
     <BaseArticle :article="article"></BaseArticle>
   </div>
 </template>

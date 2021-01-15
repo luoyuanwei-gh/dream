@@ -13,7 +13,7 @@
             :label="tab.name"
             :name="tab.path"
             >
-            <UiBreadcrumb></UiBreadcrumb>{{activeTabPath}}
+            <UiBreadcrumb></UiBreadcrumb>
           </el-tab-pane>
           <router-view></router-view>
         </el-tabs>
@@ -101,7 +101,6 @@ export default {
   width: 240px;
   height: calc(100vh - 80px);
   overflow: auto;
-  border-right: 1px solid #ddd;
 }
 .com-content {
   flex: 1;

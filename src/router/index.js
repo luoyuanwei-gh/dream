@@ -12,6 +12,12 @@ const routes = [
     name: 'IndexLayout',
     component: () => import('../layouts/IndexLayout.vue'),
     children: routers
+  },
+  {
+    path: '/demo',
+    name: 'demo',
+    component: () => import('../views/demo.vue'),
+    children: routers
   }
 ]
 

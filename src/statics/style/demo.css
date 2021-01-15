@@ -1,0 +1,8 @@
+.demo {
+	display: block;
+}
+.item {
+	border: 1xp solid #ddd;
+	width: 100px;
+	height: 100px;
+}
