@@ -1,16 +1,16 @@
 <template>
   <div class="home">
+    首页，什么都没有
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: 'home',
   components: {
-  },
-  data () {
-    return {
-    }
   }
 }
 </script>
+
+<style>
+</style>

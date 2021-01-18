@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import BaseArticle from '../../components/base/BaseArticle.vue'
+import BaseArticle from '../../components/ui/BaseArticle.vue'
 import { getJson } from '@/api/index.js'
 
 export default {

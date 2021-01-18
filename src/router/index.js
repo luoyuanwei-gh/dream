@@ -20,14 +20,19 @@ const router = new VueRouter({
 })
 
 router.afterEach((to, from) => {
+  let isHome = true
   config.menus.forEach(menu => {
     menu.children.forEach(child => {
       if (child.path === to.path) {
+        isHome = false
         const breadcrumb = [menu, child]
         store.commit('pageState/setBreadcrumb', breadcrumb)
       }
     })
   })
+  if (isHome) {
+    store.commit('pageState/setBreadcrumb', [])
+  }
 })
 
 export default router

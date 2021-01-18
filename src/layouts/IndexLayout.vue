@@ -20,7 +20,7 @@
             :name="tab.path"
             >
           </el-tab-pane>
-          <UiBreadcrumb></UiBreadcrumb>
+          <UiBreadcrumb v-if="breadcrumb.length > 0"></UiBreadcrumb>
           <router-view></router-view>
         </el-tabs>
       </div>
@@ -46,7 +46,8 @@ export default {
   computed: {
     ...mapState({
       contentTabs: state => state.pageState.pageState.contentTabs,
-      activeTab: state => state.pageState.pageState.currentPage.path
+      activeTab: state => state.pageState.pageState.currentPage.path,
+      breadcrumb: state => state.pageState.pageState.breadcrumb
     })
   },
   watch: {

@@ -1,8 +1,8 @@
 export const cssConfig = [
   {
-    id: '0',
+    id: '00',
     name: 'CSS简介',
-    path: 'cssIntroduce',
+    path: '/cssIntroduce',
     code: '0000-0000',
     icon: 'el-icon-location'
   },
