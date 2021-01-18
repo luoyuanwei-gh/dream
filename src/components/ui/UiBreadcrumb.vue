@@ -15,7 +15,6 @@ export default {
   name: 'UiBreadcrumb',
   data () {
     return {
-      breadcrumbItems: []
     }
   },
   computed: {
