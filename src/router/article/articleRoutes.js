@@ -1,6 +1,6 @@
 const articleRoutes = [
   {
-    path: '/article',
+    path: '/article/:id',
     name: 'article',
     component: () => import('../../views/article/Index.vue')
   }

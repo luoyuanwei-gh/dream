@@ -9,14 +9,14 @@ export const cssConfig = [
   {
     id: '01',
     name: 'BFC简述1',
-    path: 'article?id=index',
+    path: '/article/index',
     code: '0000-0001',
     icon: 'el-icon-location'
   },
   {
     id: '02',
     name: 'BFC简述2',
-    path: 'article?id=test',
+    path: '/article/test',
     code: '0000-0002',
     icon: 'el-icon-location'
   }

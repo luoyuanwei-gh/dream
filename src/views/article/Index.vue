@@ -18,19 +18,30 @@ export default {
       article: {}
     }
   },
-  beforeRouteUpdate (to, from, next) {
-    const id = this.$route.query.id
-    console.log(id)
+  watch: {
+    $route (to, from) {
+      const id = this.$route.params.id
+      getJson(`static/article/${id}.json`).then(res => {
+        console.log(res.data)
+        this.article = res.data
+      })
+    }
   },
   created () {
-    const id = this.$route.query.id
-    console.log(id)
-    getJson(`static/${id}.json`).then(res => {
+    const id = this.$route.params.id
+    getJson(`static/article/${id}.json`).then(res => {
       console.log(res.data)
       this.article = res.data
     })
   },
   methods: {
+    getArticleData () {
+      const id = this.$route.params.id
+      getJson(`static/article/${id}.json`).then(res => {
+        console.log(res.data)
+        this.article = res.data
+      })
+    }
   }
 }
 </script>

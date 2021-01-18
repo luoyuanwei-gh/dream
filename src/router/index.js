@@ -12,12 +12,6 @@ const routes = [
     name: 'IndexLayout',
     component: () => import('../layouts/IndexLayout.vue'),
     children: routers
-  },
-  {
-    path: '/demo',
-    name: 'demo',
-    component: () => import('../views/demo.vue'),
-    children: routers
   }
 ]
 
@@ -28,7 +22,7 @@ const router = new VueRouter({
 router.afterEach((to, from) => {
   config.menus.forEach(menu => {
     menu.children.forEach(child => {
-      if (child.path === to.name) {
+      if (child.path === to.path) {
         const breadcrumb = [menu, child]
         store.commit('pageState/setBreadcrumb', breadcrumb)
       }

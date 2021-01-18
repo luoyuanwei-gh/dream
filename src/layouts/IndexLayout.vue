@@ -78,7 +78,7 @@ export default {
           this.$store.dispatch('pageState/setCurrentPage', item)
         }
       })
-      if (this.$route.path !== '/' + this.activeTabPath) {
+      if (this.$route.path !== this.activeTabPath) {
         this.$router.push(this.activeTabPath)
       }
     }
