@@ -1,5 +1,7 @@
 import { cssConfig } from './css/index.js'
 import { jsConfig } from './js/index.js'
+import { networkResource } from './networkResource/networkResource.js'
+
 export const config = {
   menus: [
     {
@@ -17,6 +19,14 @@ export const config = {
       code: '0001',
       icon: 'el-icon-location',
       children: jsConfig
+    },
+    {
+      id: 2,
+      name: '网络资料',
+      path: '/',
+      code: '0002',
+      icon: 'el-icon-location',
+      children: networkResource
     }
   ]
 }

@@ -21,7 +21,7 @@
             >
           </el-tab-pane>
           <UiBreadcrumb v-if="breadcrumb.length > 0"></UiBreadcrumb>
-          <router-view></router-view>
+          <router-view class="content-view"></router-view>
         </el-tabs>
       </div>
     </div>
@@ -97,9 +97,15 @@ export default {
 .com-header {
   border: 1px solid #eee;
   height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background: #fff;
 }
 .com-main {
   flex: 1;
+  height: calc(100% - 81px);
+  margin-top: 80px;
   display: flex;
   flex-direction: row;
 }
@@ -112,8 +118,32 @@ export default {
   flex: 1;
   height: 100%;
 }
+.content-view {
+  height: calc(100vh - 180px);
+  overflow: auto;
+}
 .tab-content{
   box-sizing: border-box;
   height: 100%;
+}
+/*修改滚动条样式*/
+.content-view::-webkit-scrollbar{
+  width:4px;
+  height:10px;
+  /**/
+}
+.content-view::-webkit-scrollbar-track{
+  background: rgb(239, 239, 239);
+  border-radius:2px;
+}
+.content-view::-webkit-scrollbar-thumb{
+  background: #bfbfbf;
+  border-radius:4px;
+}
+.content-view::-webkit-scrollbar-thumb:hover{
+  background: #333;
+}
+.content-view::-webkit-scrollbar-corner{
+  background: #179a16;
 }
 </style>

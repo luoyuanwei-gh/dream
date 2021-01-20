@@ -1,3 +1,8 @@
+/**
+ * id字符串以0开头
+ * code以0000开头
+ * 文章路径配置： /article/ + “文件名称”
+ */
 export const cssConfig = [
   {
     id: '00',
@@ -8,15 +13,15 @@ export const cssConfig = [
   },
   {
     id: '01',
-    name: 'BFC简述1',
-    path: '/article/index',
+    name: 'BFC简述',
+    path: '/article/bfc',
     code: '0000-0001',
     icon: 'el-icon-location'
   },
   {
     id: '02',
-    name: 'BFC简述2',
-    path: '/article/test',
+    name: 'flex布局',
+    path: '/article/flex',
     code: '0000-0002',
     icon: 'el-icon-location'
   }

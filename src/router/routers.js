@@ -1,6 +1,7 @@
 import cssRoutes from './css/cssRoutes.js'
 import jsRoutes from './js/jsRoutes.js'
-import articleRoutes from './article/articleRoutes.js'
+// import articleRoutes from './article/articleRoutes.js'
+import networkResouce from './networkResouce/networkResouce.js'
 
 const routers = [
   {
@@ -10,7 +11,8 @@ const routers = [
   }].concat(
   cssRoutes,
   jsRoutes,
-  articleRoutes
+  // articleRoutes,
+  networkResouce
 )
 
 export default routers

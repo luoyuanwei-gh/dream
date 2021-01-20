@@ -56,7 +56,7 @@ export default {
 <style>
   .article {
     margin: 0 auto;
-    width: 1024px;
+    max-width: 1024px;
   }
 .article-info {
   margin: 20px 0;
