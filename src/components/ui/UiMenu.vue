@@ -20,13 +20,12 @@
   </div>
 </template>
 <script>
-import { config } from '../../statics/config/index.js'
 import { mapState } from 'vuex'
 export default {
   name: 'UiMenu',
   data () {
     return {
-      menus: config.menus
+      menus: []
     }
   },
   computed: {
@@ -36,8 +35,15 @@ export default {
     })
   },
   mounted () {
+    this.getMenu()
   },
   methods: {
+    getMenu () {
+      this.$axios.get('getMenu').then(res => {
+        this.menus = res.data.menu
+        console.log(res.data.menu)
+      })
+    },
     goLink (item) {
       this.$store.dispatch('pageState/setCurrentPage', item)
       const isExit = this.contentTabs.some(itemTab => {

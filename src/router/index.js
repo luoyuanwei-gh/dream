@@ -12,6 +12,21 @@ const routes = [
     name: 'IndexLayout',
     component: () => import('../layouts/IndexLayout.vue'),
     children: routers
+  },
+  {
+    path: '/vision',
+    name: 'vision',
+    component: () => import('../views/Vision.vue')
+  },
+  {
+    path: '/responsive',
+    name: 'responsive',
+    component: () => import('../views/Responsive.vue')
+  },
+  {
+    path: '/publishArticle',
+    name: 'publishArticle',
+    component: () => import('../views/admin/PublishArticle.vue')
   }
 ]
 

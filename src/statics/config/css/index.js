@@ -24,5 +24,12 @@ export const cssConfig = [
     path: '/article/flex',
     code: '0000-0002',
     icon: 'el-icon-location'
+  },
+  {
+    id: '03',
+    name: '响应式布局',
+    path: '/article/responsive',
+    code: '0000-0003',
+    icon: 'el-icon-location'
   }
 ]

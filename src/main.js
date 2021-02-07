@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './plugins/element.js'
+import './http/axios.js'
 
 import hljs from 'highlight.js'
 import 'highlight.js/styles/googlecode.css' // 样式文件
@@ -15,6 +16,8 @@ Vue.directive('highlight', function (el) {
 })
 
 Vue.config.productionTip = false
+
+console.log('++++++++++++++++++++++++++++++')
 
 new Vue({
   router,

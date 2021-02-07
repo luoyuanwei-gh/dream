@@ -1,12 +1,22 @@
 <template>
-  <div class="ui-code" v-highlight>
-    <pre><code>{{dataObj.text}}</code></pre>
+  <div class="ui-table">
+    <el-table
+        :data="dataObj.data"
+        border
+        stripe
+        style="width: 100%">
+        <el-table-column v-for="(item, index) in dataObj.columns"
+          :key="index"
+          :prop="item.prop"
+          :label="item.label">
+        </el-table-column>
+      </el-table>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'UiCode',
+  name: 'UiTable',
   data () {
     return {
     }

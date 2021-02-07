@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import BaseArticle from '../components/base/BaseArticle.vue'
+import BaseArticle from './article/Index.vue'
 export default {
   name: 'demo',
   components: {

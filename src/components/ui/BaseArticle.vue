@@ -11,6 +11,7 @@
       <UiParagraph class="article-item" v-else-if="item.type === 'paragraph'" :dataObj="item.data">{{item.data}}</UiParagraph>
       <UiCode class="article-item" v-else-if="item.type === 'code'" :dataObj="item.data">{{item.data}}</UiCode>
       <UiList class="article-item" v-else-if="item.type === 'list'" :dataObj="item.data">{{item.data}}</UiList>
+      <UiTable class="article-item" v-else-if="item.type === 'table'" :dataObj="item.data">{{item.data}}</UiTable>
     </div>
   </div>
 </template>
@@ -22,6 +23,7 @@ import UiImage from '../base/article/UiImage.vue'
 import UiParagraph from '../base/article/UiParagraph.vue'
 import UiCode from '../base/article/UiCode.vue'
 import UiList from '../base/article/UiList.vue'
+import UiTable from '../base/article/UiTable.vue'
 
 export default {
   name: 'BaseArticle',
@@ -31,7 +33,8 @@ export default {
     UiImage,
     UiParagraph,
     UiCode,
-    UiList
+    UiList,
+    UiTable
   },
   data () {
     return {

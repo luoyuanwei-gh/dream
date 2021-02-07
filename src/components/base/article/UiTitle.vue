@@ -13,7 +13,7 @@ export default {
   },
   props: {
     titleInfo: {
-      default: '标题',
+      default: '',
       type: String
     }
   },

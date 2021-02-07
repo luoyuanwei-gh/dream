@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-breadcrumb separator=">">
+    <el-breadcrumb separator="/">
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
       <el-breadcrumb-item v-for="breadcrumbItem in breadcrumb" :key="breadcrumbItem.code">
         {{breadcrumbItem.name}}

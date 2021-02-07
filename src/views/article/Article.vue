@@ -6,8 +6,6 @@
 
 <script>
 import BaseArticle from '../../components/ui/BaseArticle.vue'
-import { getJson } from '@/api/index.js'
-
 export default {
   name: 'Home',
   components: {
@@ -20,26 +18,19 @@ export default {
   },
   watch: {
     $route (to, from) {
-      const id = this.$route.params.id
-      getJson(`static/article/${id}.json`).then(res => {
-        console.log(res.data)
-        this.article = res.data
-      })
+      this.id = this.$route.params.id
+      this.getArticleData()
     }
   },
   created () {
-    const id = this.$route.params.id
-    getJson(`static/article/${id}.json`).then(res => {
-      console.log(res.data)
-      this.article = res.data
-    })
+    this.id = this.$route.params.id
+    this.getArticleData()
   },
   methods: {
     getArticleData () {
-      const id = this.$route.params.id
-      getJson(`static/article/${id}.json`).then(res => {
-        console.log(res.data)
-        this.article = res.data
+      this.article = {}
+      this.$axios.get(`article/${this.id}`).then(res => {
+        this.article = res.data.data
       })
     }
   }

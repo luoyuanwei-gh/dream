@@ -20,7 +20,7 @@
             :name="tab.path"
             >
           </el-tab-pane>
-          <UiBreadcrumb v-if="breadcrumb.length > 0"></UiBreadcrumb>
+          <UiBreadcrumb class="breadcrumb-box" v-if="breadcrumb.length > 0"></UiBreadcrumb>
           <router-view class="content-view"></router-view>
         </el-tabs>
       </div>
