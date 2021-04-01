@@ -22,11 +22,6 @@ const routes = [
     path: '/responsive',
     name: 'responsive',
     component: () => import('../views/Responsive.vue')
-  },
-  {
-    path: '/publishArticle',
-    name: 'publishArticle',
-    component: () => import('../views/admin/PublishArticle.vue')
   }
 ]
 

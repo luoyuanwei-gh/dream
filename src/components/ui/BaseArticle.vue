@@ -57,10 +57,10 @@ export default {
 </script>
 
 <style>
-  .article {
-    margin: 0 auto;
-    max-width: 1024px;
-  }
+.article {
+  margin: 0 auto;
+  max-width: 1024px;
+}
 .article-info {
   margin: 20px 0;
 }
@@ -69,5 +69,12 @@ export default {
 }
 .article-item {
   margin-bottom: 20px;
+}
+a {
+  color: #5b60f7;
+  text-decoration: none;
+}
+.text-bold {
+  font-weight: bold;
 }
 </style>

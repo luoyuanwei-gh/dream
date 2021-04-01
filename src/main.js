@@ -17,8 +17,6 @@ Vue.directive('highlight', function (el) {
 
 Vue.config.productionTip = false
 
-console.log('++++++++++++++++++++++++++++++')
-
 new Vue({
   router,
   store,

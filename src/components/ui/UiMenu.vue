@@ -39,9 +39,8 @@ export default {
   },
   methods: {
     getMenu () {
-      this.$axios.get('getMenu').then(res => {
+      this.$axios.get('http://localhost:3000/getMenu').then(res => {
         this.menus = res.data.menu
-        console.log(res.data.menu)
       })
     },
     goLink (item) {

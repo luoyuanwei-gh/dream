@@ -26,14 +26,3 @@ export default ({
 
   Vue.prototype.$axios = axios
 }
-
-// 如果请求中出现401，则自动刷新token后再次请求，避免跳转login
-// async function doRequest(error) {
-//   console.log('doRequest')
-//   console.log(error)
-//   const config = error.response.config
-
-//   const res = await axios.request(config)
-
-//   return res
-// }

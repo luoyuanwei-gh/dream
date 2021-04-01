@@ -9,6 +9,9 @@
           :key="index"
           :prop="item.prop"
           :label="item.label">
+          <template slot-scope="scope">
+            <span v-html="scope.row[item.prop]"></span>
+          </template>
         </el-table-column>
       </el-table>
   </div>

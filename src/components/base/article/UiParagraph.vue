@@ -34,9 +34,6 @@ export default {
     getHtmlStr (element) {
       let elStr = ''
       switch (element.type) {
-        case 'a':
-          elStr = `<a href="${element.url}" class="link-a">${element.text}</a>`
-          break
         case 'bold':
           elStr = `<span class="text-bold">${element.text}</span>`
           break
@@ -60,8 +57,5 @@ export default {
 .link-a {
   text-decoration: none!important;
   color: blue;
-}
-.text-bold {
-  font-weight: bold;
 }
 </style>
