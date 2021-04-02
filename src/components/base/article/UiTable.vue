@@ -2,15 +2,25 @@
   <div class="ui-table">
     <el-table
         :data="dataObj.data"
+        max-height="400"
         border
         stripe
         style="width: 100%">
+        <el-table-column type="expand" v-if="dataObj.expand">
+          <template slot-scope="props">
+            <el-form label-position="left" inline class="demo-table-expand">
+              <p style="margin-bottom: 6px;" v-for="expandItem in props.row.expand" :key="expandItem" v-html="expandItem"></p>
+            </el-form>
+          </template>
+        </el-table-column>
         <el-table-column v-for="(item, index) in dataObj.columns"
+          fixed
           :key="index"
           :prop="item.prop"
-          :label="item.label">
+          :label="item.label"
+          :width="item.width">
           <template slot-scope="scope">
-            <span v-html="scope.row[item.prop]"></span>
+            <p v-html="scope.row[item.prop]"></p>
           </template>
         </el-table-column>
       </el-table>
