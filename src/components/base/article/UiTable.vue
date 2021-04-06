@@ -6,7 +6,7 @@
         border
         stripe
         style="width: 100%">
-        <el-table-column type="expand" v-if="dataObj.expand">
+        <el-table-column type="expand" fixed="left" v-if="dataObj.expand">
           <template slot-scope="props">
             <el-form label-position="left" inline class="demo-table-expand">
               <p style="margin-bottom: 6px;" v-for="expandItem in props.row.expand" :key="expandItem" v-html="expandItem"></p>
