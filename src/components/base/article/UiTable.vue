@@ -2,7 +2,6 @@
   <div class="ui-table">
     <el-table
         :data="dataObj.data"
-        max-height="400"
         border
         stripe
         style="width: 100%">
