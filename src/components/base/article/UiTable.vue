@@ -9,7 +9,7 @@
           <template slot-scope="props">
             <el-form label-position="left" inline class="demo-table-expand">
               <p style="margin-bottom: 6px;" v-for="expandItem in props.row.expand" :key="expandItem" v-html="expandItem"></p>
-              <UiCode :dataObj="props.row.code"></UiCode>
+              <UiCode v-if="props.row.code" :dataObj="props.row.code"></UiCode>
             </el-form>
           </template>
         </el-table-column>
