@@ -31,13 +31,14 @@ export default {
 
 <style>
 .ui-code {
-  background: #d0d0d0;
+  background: #000;
   padding: 20px;
   text-align: left;
+  border-radius: 8px;
 }
 .hljs {
-  color: #888;
-  background: #eee;
+  color: #fff;
+  background: #000;
   border-radius: 6px;
 }
 .hljs-tag,
@@ -50,5 +51,11 @@ export default {
 }
 .hljs-attribute {
   color: #0000ff;
+}
+.hljs-keyword {
+  color: #a6e22e;
+}
+.hljs-number {
+  color: #ae81ff;
 }
 </style>

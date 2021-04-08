@@ -1,6 +1,5 @@
 <template>
   <div class="ui-paragraph" v-html="analysisParagraph()">
-    <a class="link-a"></a>
   </div>
 </template>
 

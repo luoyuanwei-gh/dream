@@ -9,6 +9,7 @@
           <template slot-scope="props">
             <el-form label-position="left" inline class="demo-table-expand">
               <p style="margin-bottom: 6px;" v-for="expandItem in props.row.expand" :key="expandItem" v-html="expandItem"></p>
+              <UiCode :dataObj="props.row.code"></UiCode>
             </el-form>
           </template>
         </el-table-column>
@@ -27,8 +28,12 @@
 </template>
 
 <script>
+import UiCode from './UiCode.vue'
 export default {
   name: 'UiTable',
+  components: {
+    UiCode
+  },
   data () {
     return {
     }
@@ -52,25 +57,4 @@ export default {
 </script>
 
 <style>
-.ui-code {
-  background: #d0d0d0;
-  padding: 20px;
-  text-align: left;
-}
-.hljs {
-  color: #888;
-  background: #eee;
-  border-radius: 6px;
-}
-.hljs-tag,
-.hljs-name,
-.hljs-attr {
-  color: #0000ff;
-}
-.hljs-selector-class {
-  color: #888;
-}
-.hljs-attribute {
-  color: #0000ff;
-}
 </style>
