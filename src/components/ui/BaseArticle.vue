@@ -6,12 +6,12 @@
       <span>{{article.time}}</span>
     </div>
     <div v-for="(item, index) in article.content" :key="index">
-      <UiSubhead class="article-item" v-if="item.type === 'subhead'" :dataObj="item.data">{{item.data}}</UiSubhead>
-      <UiImage class="article-item" v-else-if="item.type === 'image'" :dataObj="item.data">{{item.data}}</UiImage>
-      <UiParagraph class="article-item" v-else-if="item.type === 'paragraph'" :dataObj="item.data">{{item.data}}</UiParagraph>
-      <UiCode class="article-item" v-else-if="item.type === 'code'" :dataObj="item.data">{{item.data}}</UiCode>
-      <UiList class="article-item" v-else-if="item.type === 'list'" :dataObj="item.data">{{item.data}}</UiList>
-      <UiTable class="article-item" v-else-if="item.type === 'table'" :dataObj="item.data">{{item.data}}</UiTable>
+      <UiSubhead class="article-item" v-if="item.type === 'subhead'" :dataObj="item.data"></UiSubhead>
+      <UiImage class="article-item" v-else-if="item.type === 'image'" :dataObj="item.data"></UiImage>
+      <UiParagraph class="article-item" v-else-if="item.type === 'paragraph'" :dataObj="item.data"></UiParagraph>
+      <UiCode class="article-item" v-else-if="item.type === 'code'" :dataObj="item.data"></UiCode>
+      <UiList class="article-item" v-else-if="item.type === 'list'" :dataObj="item.data"></UiList>
+      <UiTable class="article-item" v-else-if="item.type === 'table'" :dataObj="item.data"></UiTable>
     </div>
   </div>
 </template>

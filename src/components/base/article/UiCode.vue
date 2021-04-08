@@ -1,6 +1,6 @@
 <template>
   <div class="ui-code" v-highlight>
-    <pre><code><span class="code-block" v-for="(code, index) in dataObj" :key="index">{{code.notes}}<span class="code-block">{{dealCodeText(code.text)}}</span></span></code></pre>
+    <pre><code><span class="code-block code-block-margin" v-for="(code, index) in dataObj" :key="index">{{dealNotes(code.notes)}}<span class="code-block">{{dealCodeText(code.text)}}</span><span v-if="code.print">{{dealNotes(code.print)}}</span></span></code></pre>
   </div>
 </template>
 
@@ -10,7 +10,6 @@ export default {
   name: 'UiCode',
   data () {
     return {
-      codeText: ''
     }
   },
   props: {
@@ -29,6 +28,9 @@ export default {
   methods: {
     dealCodeText (code) {
       return beautify(code)
+    },
+    dealNotes (notes) {
+      return notes + '\n'
     }
   }
 }
@@ -36,6 +38,7 @@ export default {
 
 <style>
 .ui-code {
+  line-height: 20px;
   background: #444;
   padding: 20px;
   text-align: left;
@@ -66,11 +69,14 @@ export default {
 .hljs-comment {
   color: #b1d8a8;
 }
+.hljs-type {
+  color: #06d4f5;
+}
 .code-block {
   display: block;
-  margin-bottom: 10px;
 }
-.margin-bottom-10 {
-  margin-bottom: 10px;
+.code-block-margin {
+  margin: 10px 0;
 }
+
 </style>
