@@ -1,6 +1,6 @@
 <template>
   <div class="ui-code" v-highlight>
-    <pre><code>{{codeText}}</code></pre>
+    <pre><code><span class="code-block" v-for="(code, index) in dataObj" :key="index">{{code.notes}}<span class="code-block">{{dealCodeText(code.text)}}</span></span></code></pre>
   </div>
 </template>
 
@@ -16,18 +16,20 @@ export default {
   props: {
     dataObj: {
       default: function () {
-        return {}
+        return []
       },
-      type: Object
+      type: Array
     }
   },
   computed: {
   },
   created () {
-    this.codeText = beautify(this.dataObj.text)
-    console.log(this.codeText)
+    console.log(this.dataObj)
   },
   methods: {
+    dealCodeText (code) {
+      return beautify(code)
+    }
   }
 }
 </script>
@@ -60,5 +62,15 @@ export default {
 }
 .hljs-number {
   color: #ae81ff;
+}
+.hljs-comment {
+  color: #b1d8a8;
+}
+.code-block {
+  display: block;
+  margin-bottom: 10px;
+}
+.margin-bottom-10 {
+  margin-bottom: 10px;
 }
 </style>
