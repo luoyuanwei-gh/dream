@@ -1,6 +1,6 @@
 <template>
   <div class="ui-code" v-highlight>
-    <pre><code><span class="code-block code-block-margin" v-for="(code, index) in dataObj" :key="index">{{dealNotes(code.notes)}}<span class="code-block">{{dealCodeText(code.text)}}</span><span v-if="code.print">{{dealNotes(code.print)}}</span></span></code></pre>
+    <pre><code><span class="code-block code-block-margin" v-for="(code, index) in dataObj" :key="index"><span class="note-text" v-if="code.notes">{{dealNotes(code.notes)}}</span><span class="code-block">{{dealCodeText(code.text)}}</span><span class="note-text" v-if="code.print">{{dealNotes(code.print)}}</span></span></code></pre>
   </div>
 </template>
 
@@ -30,6 +30,7 @@ export default {
       return beautify(code)
     },
     dealNotes (notes) {
+      console.log(notes + '\n')
       return notes + '\n'
     }
   }
@@ -43,6 +44,12 @@ export default {
   padding: 20px;
   text-align: left;
   border-radius: 8px;
+}
+.code-block {
+  display: block;
+}
+.code-block-margin {
+  margin: 10px 0;
 }
 .hljs {
   color: #fff;
@@ -63,20 +70,22 @@ export default {
 .hljs-keyword {
   color: #a6e22e;
 }
-.hljs-number {
-  color: #ae81ff;
-}
 .hljs-comment {
   color: #b1d8a8;
 }
 .hljs-type {
   color: #06d4f5;
 }
-.code-block {
-  display: block;
+.hljs-built_in {
+  color:#A6E22E;
 }
-.code-block-margin {
-  margin: 10px 0;
+.code-block,
+.hljs-number,
+.hljs-string {
+  color: #fbbff9;
 }
-
+.note-text,
+.note-text > span{
+  color: #8b9489!important;
+}
 </style>
