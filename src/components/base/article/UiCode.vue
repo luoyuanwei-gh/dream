@@ -79,6 +79,8 @@ export default {
 .hljs-built_in {
   color:#A6E22E;
 }
+.hljs-title,
+.hljs-params,
 .code-block,
 .hljs-number,
 .hljs-string {
@@ -87,5 +89,12 @@ export default {
 .note-text,
 .note-text > span{
   color: #8b9489!important;
+}
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-meta,
+.hljs-link {
+    color: #dcc731;
 }
 </style>
