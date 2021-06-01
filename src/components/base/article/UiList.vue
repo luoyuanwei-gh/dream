@@ -6,7 +6,7 @@
     </div>
     <ul class="ui-list-ul">
       <li class="ui-list-li" v-for="(item, index) in dataObj.content" :key="index">
-        {{item}}
+         <div v-html="item"></div>
       </li>
     </ul>
   </div>

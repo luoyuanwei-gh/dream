@@ -4,7 +4,7 @@
         :data="dataObj.data"
         border
         stripe
-        style="width: 100%">
+        style="width: 100%;">
         <el-table-column type="expand" fixed="left" v-if="dataObj.expand">
           <template slot-scope="props">
             <el-form label-position="left" inline class="demo-table-expand">
