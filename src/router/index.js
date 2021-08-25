@@ -10,6 +10,13 @@ const routes = [
     name: 'IndexLayout',
     component: () => import('../layouts/IndexLayout.vue'),
     children: routers
+  },
+  {
+    path: '/temporary',
+    name: 'Temporary',
+    component: () => import('../layouts/Temporary.vue'),
+    children: [
+    ]
   }
 ]
 

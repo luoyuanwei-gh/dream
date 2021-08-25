@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     analysisHtml () {
-      console.log(this.dataObj.text)
+      console.log(this.dataObj)
     }
   }
 }
