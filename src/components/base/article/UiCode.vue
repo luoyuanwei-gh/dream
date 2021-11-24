@@ -40,7 +40,7 @@ export default {
 <style>
 .ui-code {
   line-height: 20px;
-  background: #444;
+  background: #b4c1ef4f;
   padding: 20px;
   text-align: left;
   border-radius: 8px;
@@ -53,7 +53,7 @@ export default {
 }
 .hljs {
   color: #fff;
-  background: #444;
+  background: #000;
   border-radius: 6px;
 }
 .hljs-tag,
